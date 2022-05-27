@@ -1,0 +1,95 @@
+object Form1: TForm1
+  Left = 419
+  Height = 240
+  Top = 172
+  Width = 477
+  Caption = 'Form1'
+  ClientHeight = 240
+  ClientWidth = 477
+  OnClose = FormClose
+  OnShow = FormShow
+  LCLVersion = '2.3.0.0'
+  object Memo1: TMemo
+    AnchorSideLeft.Control = Owner
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Button1
+    AnchorSideBottom.Control = Owner
+    AnchorSideBottom.Side = asrBottom
+    Left = 10
+    Height = 220
+    Top = 10
+    Width = 297
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Around = 10
+    Lines.Strings = (
+      'Memo1'
+    )
+    ReadOnly = True
+    TabOrder = 0
+  end
+  object Button1: TButton
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 317
+    Height = 25
+    Top = 10
+    Width = 150
+    Anchors = [akTop, akRight]
+    AutoSize = True
+    BorderSpacing.Around = 10
+    Caption = 'Append'
+    Constraints.MinHeight = 25
+    Constraints.MinWidth = 150
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    AnchorSideLeft.Control = Button1
+    AnchorSideTop.Control = Button1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Button1
+    AnchorSideRight.Side = asrBottom
+    Left = 317
+    Height = 25
+    Top = 45
+    Width = 150
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 10
+    Caption = 'AppendLine'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Button3: TButton
+    AnchorSideLeft.Control = Button1
+    AnchorSideTop.Control = Button2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Button1
+    AnchorSideRight.Side = asrBottom
+    Left = 317
+    Height = 25
+    Top = 80
+    Width = 150
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 10
+    Caption = 'AppendFormat'
+    OnClick = Button3Click
+    TabOrder = 3
+  end
+  object Button4: TButton
+    AnchorSideLeft.Control = Button1
+    AnchorSideTop.Control = Button3
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = Button1
+    AnchorSideRight.Side = asrBottom
+    Left = 317
+    Height = 25
+    Top = 115
+    Width = 150
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Top = 10
+    Caption = 'CopyTo'
+    OnClick = Button4Click
+    TabOrder = 4
+  end
+end
