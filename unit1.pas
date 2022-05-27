@@ -38,7 +38,7 @@ fn = 'd:\Archive\code_source\stringbuilder\example_list.txt';
   {$IFDEF LINUX}
   fn = '/home/leyba/laz_proj/stringbuilder/example_list.txt';
   {$ELSE}
-  fn = 'd:\Archive\code_source\stringbuilder\example_list.txt';
+  fn = '/Users/admin/laz_project/stringbuilder/example_list.txt';
   {$ENDIF}
 {$ENDIF}
 
