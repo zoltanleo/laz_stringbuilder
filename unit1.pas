@@ -17,7 +17,7 @@ type
     Button2: TButton;
     Button3: TButton;
     Button4: TButton;
-    Memo1: TMemo;
+    Memon: TMemo;
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
@@ -36,7 +36,7 @@ const
 fn = 'd:\Archive\code_source\stringbuilder\example_list.txt';
 {$ELSE}
   {$IFDEF LINUX}
-  fn = 'd:\Archive\code_source\stringbuilder\example_list.txt';
+  fn = '/home/leyba/laz_proj/stringbuilder/example_list.txt';
   {$ELSE}
   fn = 'd:\Archive\code_source\stringbuilder\example_list.txt';
   {$ENDIF}
@@ -56,8 +56,8 @@ begin
   FSB:= TStringBuilder.Create;
   FSL:= TStringList.Create;
   if FileExists(fn) then FSL.LoadFromFile(fn);
-  Memo1.ScrollBars:= ssAutoBoth;
-  Memo1.WordWrap:= False;
+  Memon.ScrollBars:= ssAutoBoth;
+  Memon.WordWrap:= False;
 end;
 
 procedure TForm1.FormClose(Sender: TObject; var CloseAction: TCloseAction);
@@ -75,8 +75,8 @@ begin
   for i:= 0 to Pred(FSL.Count) do
     FSB.Append(Trim(FSL.Strings[i]) + '~');
 
-  Memo1.Clear;
-  Memo1.Text:= FSB.ToString;
+  Memon.Clear;
+  Memon.Text:= FSB.ToString;
 end;
 
 procedure TForm1.Button2Click(Sender: TObject);
@@ -88,8 +88,8 @@ begin
   for i:= 0 to Pred(FSL.Count) do
     FSB.Append(Trim(FSL.Strings[i]) + '~').AppendLine('*');
 
-  Memo1.Clear;
-  Memo1.Text:= FSB.ToString;
+  Memon.Clear;
+  Memon.Text:= FSB.ToString;
 end;
 
 procedure TForm1.Button3Click(Sender: TObject);
@@ -106,8 +106,8 @@ begin
                       '~'
                       ]);
 
-  Memo1.Clear;
-  Memo1.Text:= FSB.ToString;
+  Memon.Clear;
+  Memon.Text:= FSB.ToString;
 end;
 
 procedure TForm1.Button4Click(Sender: TObject);
@@ -125,7 +125,7 @@ begin
 
     FSB.Append(FSL.CommaText);
 
-  Memo1.Clear;
+  Memon.Clear;
 
   //for CounterVar := 0 to Pred(Count) do
 
