@@ -13,15 +13,15 @@ type
   { TForm1 }
 
   TForm1 = class(TForm)
-    Button1: TButton;
-    Button2: TButton;
-    Button3: TButton;
-    Button4: TButton;
+    btnAppend: TButton;
+    btnAppendLine: TButton;
+    btnAppendFormat: TButton;
+    btnCopyTo: TButton;
     Memon: TMemo;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
-    procedure Button3Click(Sender: TObject);
-    procedure Button4Click(Sender: TObject);
+    procedure btnAppendClick(Sender: TObject);
+    procedure btnAppendLineClick(Sender: TObject);
+    procedure btnAppendFormatClick(Sender: TObject);
+    procedure btnCopyToClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
   private
@@ -33,7 +33,7 @@ type
 
 const
 {$IFDEF MSWINDOWS}
-fn = 'd:\Archive\code_source\stringbuilder\example_list.txt';
+fn = 'd:\Archive\my_repo\stringbuilder\example_list.txt';
 {$ELSE}
   {$IFDEF LINUX}
   fn = '/home/leyba/laz_proj/stringbuilder/example_list.txt';
@@ -66,7 +66,7 @@ begin
   FreeAndNil(FSB);
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
+procedure TForm1.btnAppendClick(Sender: TObject);
 var
   i: Integer;
 begin
@@ -79,7 +79,7 @@ begin
   Memon.Text:= FSB.ToString;
 end;
 
-procedure TForm1.Button2Click(Sender: TObject);
+procedure TForm1.btnAppendLineClick(Sender: TObject);
 var
   i: Integer;
 begin
@@ -92,7 +92,7 @@ begin
   Memon.Text:= FSB.ToString;
 end;
 
-procedure TForm1.Button3Click(Sender: TObject);
+procedure TForm1.btnAppendFormatClick(Sender: TObject);
 var
   i: Integer;
 begin
@@ -110,7 +110,7 @@ begin
   Memon.Text:= FSB.ToString;
 end;
 
-procedure TForm1.Button4Click(Sender: TObject);
+procedure TForm1.btnCopyToClick(Sender: TObject);
 const
   ss = 'qrtwyeженксыф';
 var
